@@ -1,8 +1,8 @@
 name: Corey Senger
 markdown: kramdown
-collections_dir: collections
+collections_dir: _collections
 collections:
-  projects:
+  papers:
     output: true
-    permalink: /projects/:year/:month/:day/:title
-    layout: project
+    permalink: /posts/:year/:month/:day/:title
+    layout: paper

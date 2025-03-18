@@ -1,0 +1,27 @@
+---
+layout: feed
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+	<title>Corey Senger's Papers</title>
+	<link href="http://cobaltalchemist.github.io/papers/atom.xml" rel="self"/>
+	<link href="http://cobaltalchemist.github.io/papers"/>
+	<updated>{{ site.time | date_to_xmlschema }}</updated>
+	<id>http://cobaltalchemist.github.io/papers</id>
+	<author>
+		<name>Corey Senger</name>
+		<email>cobaltalchemist@gmail.com</email>
+	</author>
+
+	{% for paper in site.papers %}
+		<entry>
+			<title>{{ paper.title }}</title>
+			<link href="http://cobaltalchemist.github.io{{ paper.url }}"/>
+			<updated>{{ paper.date | date_to_xmlschema }}</updated>
+			<id>http://cobaltalchemist.github.io{{ paper.id }}</id>
+			<content type="html">{{ paper.content | xml_escape }}</content>
+		</entry>
+	{% endfor %}
+
+</feed>

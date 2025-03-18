@@ -5,16 +5,16 @@ layout: feed
 <feed xmlns="http://www.w3.org/2005/Atom">
 
 	<title>Corey Senger's Projects</title>
-	<link href="http://cobaltalchemist.github.io/projects/atom.xml" rel="self"/>
-	<link href="http://cobaltalchemist.github.io/projects"/>
+	<link href="http://cobaltalchemist.github.io/posts/atom.xml" rel="self"/>
+	<link href="http://cobaltalchemist.github.io/posts"/>
 	<updated>{{ site.time | date_to_xmlschema }}</updated>
-	<id>http://cobaltalchemist.github.io/projects</id>
+	<id>http://cobaltalchemist.github.io/posts</id>
 	<author>
 		<name>Corey Senger</name>
 		<email>cobaltalchemist@gmail.com</email>
 	</author>
 
-	{% for project in site.projects %}
+	{% for project in site.posts %}
 		<entry>
 			<title>{{ project.title }}</title>
 			<link href="http://cobaltalchemist.github.io{{ project.url }}"/>
