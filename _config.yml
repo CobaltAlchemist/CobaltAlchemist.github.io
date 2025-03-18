@@ -1,6 +1,6 @@
 name: Corey Senger
 markdown: kramdown
-collections_dir: _collections
+collections_dir: collections
 collections:
   papers:
     output: true
