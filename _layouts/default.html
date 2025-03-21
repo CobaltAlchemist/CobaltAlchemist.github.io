@@ -2,7 +2,7 @@
 <html>
     <head>
         <script>
-            const themeTemp = localStorage.getItem('theme');
+            const themeTemp = localStorage.getItem('theme') || 'system';
             if (themeTemp && themeTemp === 'dark' || themeTemp === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
                 document.documentElement.setAttribute('data-theme', 'dark');
             }

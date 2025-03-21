@@ -1,4 +1,4 @@
-const savedTheme = localStorage.getItem("theme");
+const savedTheme = localStorage.getItem("theme") || "system";
 const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 let initialTheme = savedTheme;
 if (initialTheme === null || initialTheme === "system") {
