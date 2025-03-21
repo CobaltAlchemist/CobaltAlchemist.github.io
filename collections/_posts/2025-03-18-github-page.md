@@ -22,6 +22,8 @@ Coming from a background where most of my frontend tinkering has been with React
 
 What I appreciate most about Jekyll and GitHub Pages is precisely their simplicity. They don't try to do more than necessary, which just so happens to be exactly what I need for this use case. Admittedly, CSS and HTML aren't my favorite parts of the tech stack, but this experience was good practice and I think I can take this into future projects that deal with frontent. In a previous job we used C and implemented object-oriented programming manually which was a massive headache, but showed me a lot of the underlying mechanics of OOP. In that same way, this project has given me a better understanding of the frontend stack.
 
+A later challenged that surfaced was darkmode which came with a few lessons. First of all, there's this horrible flickering that I've still not figured out. It's due to style sheets taking longer than the content to load. Browsers tend to load the raw HTML before the CSS with one of the suggestions being to load styles and important scripts inline with the head tag. However, even adding an inline script to load the dark mode CSS didn't fix the issue. Similarly, learning to have an anti-entropy approach to dark mode was important as some ~3 deployments were wasted because of a bad value in my local storage. 'theme' was becoming 'null' and that was determined as 'undefined' in my theme rotation. So explicitly checking if the value was contained within the appropriate set of values helped me re-align browsers that ended up in a bad state.
+
 ### Future Plans
 
 While I've heard good things about alternatives like Hugo or Next.js, as long as GitHub Pages continues to support Jekyll seamlessly, I don't see myself switching anytime soon.
