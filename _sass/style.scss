@@ -1,0 +1,138 @@
+html {
+    transition: background 0.2s ease, color 0.3s ease;
+    background: var(--background);
+    box-sizing: border-box;
+    color: var(--text);
+    font-family: $body-font;
+}
+
+body {
+    margin-top: 0;
+    margin: 0 3rem;
+    max-width: 1280px;
+    // Center the whole page
+    margin: 0 auto;
+
+    a {
+        color: var(--accent);
+    }
+}
+
+.content {
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+.theme-toggle {
+    user-select: none;
+    margin: 0 1rem;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: transform 0.2s;
+
+    span {
+        cursor: pointer;
+    }
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    &:active {
+        transform: scale(0.9);
+    }
+}
+
+
+@media (max-width: 768px) {
+    body {
+        padding: 0 1rem;
+        max-width: 100%;
+    }
+
+    header {
+        flex: auto;
+        flex-direction: column;
+
+        h1 {
+            padding: 1rem 0;
+        }
+    }
+
+    nav {
+        border-top: 1px solid var(--primary);
+        width: 100%;
+
+        ul {
+            flex-direction: column;
+    
+            li {
+                width: 100%;
+                border-right: none;
+                &:last-child {
+                    border-bottom: none; // Remove the border from the last item
+                }
+            }
+        }
+    }
+}
+
+.meta {
+    color: var(--secondary-500);
+}
+
+.caption {
+    font-size: 0.8em;
+    color: var(--secondary-500);
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 256px;
+    height: 256px;
+    object-fit: cover;
+    margin: 2rem 2rem;
+    display: block;
+    border: 2px solid var(--primary);
+}
+
+.post-figure {
+    margin: 1rem;
+    text-align: center;
+    border: 2px solid var(--secondary);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    background: var(--primary);
+    color: var(--text-100);
+
+    img {
+        width: 100%;
+    }
+
+    figcaption {
+        margin: 0.5rem 0;
+    }
+}
+
+.post-figure-onecol {
+    max-width: 90%;
+}
+
+.post-figure-twocol {
+    float: left;
+    max-width: 40%;
+}
+
+@media (max-width: 768px) {
+    .post-figure-twocol {
+        max-width: 90%;
+    }
+}
+
+.post-figure-float-left {
+    float: left;
+}
+
+.post-figure-float-right {
+    float: right;
+}

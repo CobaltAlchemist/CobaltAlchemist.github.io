@@ -1,4 +1,5 @@
 name: Corey Senger
+title: Corey Senger
 markdown: kramdown
 collections_dir: collections
 collections:
@@ -6,3 +7,8 @@ collections:
     output: true
     permalink: /posts/:year/:month/:day/:title
     layout: paper
+  socials:
+    social: true
+sass:
+  style: compressed
+livereload: true

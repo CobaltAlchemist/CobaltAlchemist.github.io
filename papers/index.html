@@ -1,11 +1,18 @@
 ---
-layout: default
+layout: subpage
 title: Research Papers
 ---
-	<h1>{{ page.title }}</h1>
-	<ul class="posts">
-
-	  {% for paper in site.papers %}
-	    <li><span>{{ paper.date | date_to_string }}</span> » <a href="{{ paper.url }}" title="{{ paper.title }}">{{ paper.title }}</a></li>
-	  {% endfor %}
+	<ul class="cards">
+		{% for paper in site.papers %}
+		<a href="{{ paper.url }}" class="card paper-card">
+			<img src="{{ paper.publisher-icon }}" alt="Publisher Logo" class="publisher-logo">
+			<div class="col">
+				<div class="paper-body">
+					<img src="/assets/images/papers/{{ paper.image }}" alt="{{ paper.title }}">
+					<h4>{{ paper.title }}</h4>
+					<p>{{ paper.date | date_to_string }}</p>
+				</div>
+			</div>
+		</a>
+		{% endfor %}
 	</ul>

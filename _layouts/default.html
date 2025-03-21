@@ -1,27 +1,47 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script>
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme && savedTheme === 'dark' || savedTheme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        </script>
+        <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
         <title>{{ page.title }}</title>
         <!-- link to main stylesheet -->
-        <link rel="stylesheet" type="text/css" href="/css/main.css">
+        {% include font.html %}
+        {% include katex.html %}
+        {% include analytics.html %}
+        {% include fontawesome.html %}
     </head>
     <body>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/posts">Posts</a></li>
-                <li><a href="/papers">Papers</a></li>
-            </ul>
-        </nav>
-        <div class="container">
+        <header>
+            <h4><a href="/">{{ site.title }}</a></h4>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/posts">Posts</a></li>
+                    <li><a href="/papers">Papers</a></li>
+                    <li><a href="/cv">Curriculum Vitae</a></li>
+                    <li><div class="theme-toggle" aria-label="Toggle Theme"></div></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="content">
         
         {{ content }}
         
-        </div><!-- /.container -->
+        </div>
         <footer>
             <ul>
-                <li><a href="https://github.com/CobaltAlchemist">github.com/CobaltAlchemist</a></li>
+                {% for social in site.socials %}
+                <li>
+                    <a href="{{ social.link }}"><i class="{{ social.icon }}"></i>{{ social.name }}</a>
+                </li>
+                {% endfor %}
             </ul>
         </footer>
     </body>
+    <script src="{{ '/assets/js/darkmode.js' | relative_url }}"></script>
 </html>

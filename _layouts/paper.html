@@ -1,8 +1,19 @@
 ---
 layout: default
 ---
+<script>
+  function copyBibtex(text) {
+    navigator.clipboard.writeText(text).then(() => alert("Copied to clipboard!"));
+  }
+</script>
 <h1>{{ page.title }}</h1>
-<p class="meta">{{ page.date | date_to_string }}</p>
+<span class="meta">
+  {{ page.date | date_to_string }}
+  <a href="{{page.preprint}}">Preprint</a>
+  <a href="{{page.print}}">Print</a>
+  <a href="{{page.code}}">Code</a>
+  <a href="#" onclick="copyBibtex('{{page.bibtex | strip_newlines | escape}}'); return false;">Bibtex</a>
+</span>
 
 <div class="posts">
   {{ content }}

@@ -1,8 +1,8 @@
 source "https://rubygems.org"
 
-gem "jekyll"
-
 group :jekyll_plugins do
-  gem "jekyll-feed"
-  gem "jekyll-seo-tag"
+  gem 'github-pages', '~> 232'
+  gem "jekyll-feed", "~> 0.12"
+  gem "jekyll-remote-theme"
+  gem "jekyll-watch"
 end

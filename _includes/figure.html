@@ -1,0 +1,7 @@
+<figure class="post-figure
+    {% if include.cols == 1 %} post-figure-onecol {% endif %}
+    {% if include.cols == 2 %} post-figure-twocol {% endif %}
+    {% if include.float %}post-figure-float-{{ include.float }}{% endif %}">
+    <img src="{{ include.url }}" alt="{{ include.description }}">
+    <figcaption>{{ include.description }}</figcaption>
+</figure>
