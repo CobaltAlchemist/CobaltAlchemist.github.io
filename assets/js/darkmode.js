@@ -26,7 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
             const next = rotation[current];
             const newTheme = next === "system" ? (systemPrefersDark ? "dark" : "light") : next;
             document.documentElement.setAttribute("data-theme", newTheme);
-            console.log(`Theme set to ${newTheme} from ${current}, next is ${next}`);
             localStorage.setItem("theme", next);
             themeToggle.textContent = icon[next];
         });
