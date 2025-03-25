@@ -5,8 +5,15 @@ title: Posts
 	<ul class="cards">
 		{% for post in site.posts %}
 		<a class="card post-card" href="{{ post.url }}">
-			<h4>{{ post.title }}</h6>
-			<span>{{ post.date | date_to_string }}</span>
+			<div class="row">
+				<div class="col" style="flex: 1;">
+					<h4>{{ post.title }}</h6>
+					<span>{{ post.date | date_to_string }}</span>
+				</div>
+				<div class="card-extension" style="flex: 4;">
+					<p>{{ post.excerpt }}</p>
+				</div>
+			</div>
 		</a>
 		{% endfor %}
 	</ul>

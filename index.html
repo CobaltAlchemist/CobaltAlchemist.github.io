@@ -2,47 +2,56 @@
 layout: default
 title: Corey Senger
 ---
-<div class="row">
-	<img src="/assets/images/corey.png" alt="Corey Senger" class="profile-pic">
-	<div>
-		<h2>Hey there, I'm Corey</h2>
-		<p><i class="fa-solid fa-briefcase"></i> Software Engineer at Amazon</p>
-		<p><i class="fa-solid fa-user-graduate"></i> PhD Student at University of Minnesota</p>
-	</div>
-</div>
-<p>
-	Software and Machine Learning Engineer with a passion for AI-driven systems, robotics, and computational imaging.
-	My work spans transportation automation at Amazon and holography research for my PhD at the University of Minnesota, where I focus on machine learning, computer vision, and high-performance computing.
-	I enjoy building and optimizing intelligent systems, whether it's for large-scale logistics, holographic reconstruction, or personal research projects.
-</p>
-
-<div class="row row-even row-top">
-	<div class="col">
-		<h3>Recent Activity</h3>
-		<div class="cards">
-			{% for post in site.posts limit:3 %}
-			<a class="card post-card" href="{{ post.url }}">
-				<h4>{{ post.title }}</h6>
-				<span>{{ post.date | date_to_string }}</span>
-			</a>
-			{% endfor %}
+<div class="col">
+	<div class="row row-collapse">
+		<img src="/assets/images/corey.png" alt="Corey Senger" class="profile-pic">
+		<div class="col col-left">
+			<div>
+				<div>
+					<h2>Hey there, I'm Corey</h2>
+				</div>
+				<div class="row row-left">
+					<p><i class="fa-solid fa-briefcase"></i> Software Engineer at Amazon</p>
+					<p><i class="fa-solid fa-user-graduate"></i> PhD Student at University of Minnesota</p>
+				</div>
+			</div>
+			<p>
+				Software and Machine Learning Engineer with a passion for AI-driven systems, robotics, and computational imaging.
+				My work spans transportation automation at Amazon and holography research for my PhD at the University of Minnesota, where I focus on machine learning, computer vision, and high-performance computing.
+				I enjoy building and optimizing intelligent systems, whether it's for large-scale logistics, holographic reconstruction, or personal research projects.
+			</p>
 		</div>
 	</div>
-
-	<div class="col">
-		<h3>Recent Papers</h3>
-		<div class="cards">
-			{% assign paper = site.papers | sort: 'date' | last %}
-			<a href="{{ paper.url }}" class="card paper-card">
-				<img src="{{ paper.publisher-icon }}" alt="Publisher Logo" class="publisher-logo">
-				<div class="col">
-					<div class="paper-body">
-						<img src="/assets/images/papers/{{ paper.image }}" alt="{{ paper.title }}">
-						<h4>{{ paper.title }}</h4>
-						<p>{{ paper.date | date_to_string }}</p>
+	<div class="row row-even row-top row-collapse">
+		<div class="col">
+			<h3>Recent Activity</h3>
+			<div class="cards cards-grid">
+				{% for post in site.posts limit:3 %}
+				<a class="card post-card" href="{{ post.url }}">
+					<div class="col">
+						<h4>{{ post.title }}</h6>
+						<span>{{ post.date | date_to_string }}</span>
 					</div>
-				</div>
-			</a>
+				</a>
+				{% endfor %}
+			</div>
+		</div>
+	
+		<div class="col">
+			<h3>Recent Papers</h3>
+			<div class="cards cards-grid">
+				{% assign paper = site.papers | sort: 'date' | last %}
+				<a href="{{ paper.url }}" class="card paper-card">
+					<img src="{{ paper.publisher-icon }}" alt="Publisher Logo" class="publisher-logo">
+					<div class="col">
+						<div class="paper-body">
+							<img src="/assets/images/papers/{{ paper.image }}" alt="{{ paper.title }}">
+							<h4>{{ paper.title }}</h4>
+							<p>{{ paper.date | date_to_string }}</p>
+						</div>
+					</div>
+				</a>
+			</div>
 		</div>
 	</div>
 </div>

@@ -1,10 +1,12 @@
 ---
 layout: post
 title: "Setting up a Github Page"
-date: 2014-04-30
+date: 2025-03-18
+excerpt: Recently, I was chatting with my professor, and he mentioned something about setting up a lab page. This conversation sparked my curiosity, and I found myself creating my own website. We were initially talking about GitHub Pages, a convenient way to host a static website, so I decided to give it a try...
+
 ---
 
-Recently, I was chatting with my professor, and he mentioned something about setting up a lab page. This conversation sparked my curiosity, and before I knew it, I found myself diving into creating my own website. After a little bit of exploration, I discovered GitHub Pages, a remarkably convenient way to host personal pages, and decided to give it a try.
+Recently, I was chatting with my professor, and he mentioned something about setting up a lab page. This conversation sparked my curiosity, and I found myself creating my own website. We were initially talking about GitHub Pages, a convenient way to host a static website, so I decided to give it a try.
 
 ### Why?
 
